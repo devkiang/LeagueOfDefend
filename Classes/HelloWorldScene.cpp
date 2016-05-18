@@ -1,6 +1,6 @@
 #include "HelloWorldScene.h"
 #include "SimpleAudioEngine.h"
-#include "ToolKit.h"
+#include "ChooseMapScene.h"
 USING_NS_CC;
 
 Scene* HelloWorld::createScene()
@@ -103,7 +103,31 @@ void HelloWorld::menuActionCallback(cocos2d::Ref *pSender)
 {
     Node *sender=(Node*)pSender;
     int tag=sender->getTag();
-    log("顶你个肺:%i",tag);
+    switch (tag-MenuItemTag) {
+        case 1:
+        {
+            auto scene =ChooseMapScene::createScene();
+            Director::getInstance()->replaceScene(TransitionCrossFade::create(0.5, scene));
+            //            Director::getInstance()->replaceScene(scene);
+
+        }
+            break;
+        case 2:
+        {
+            
+        }
+            break;
+
+        case 3:
+        {
+            
+        }
+            break;
+
+            
+        default:
+            break;
+    }
 }
 
 

@@ -44,15 +44,22 @@ bool HelloWorld::init()
     closeItem->setPosition(Vec2(origin.x + visibleSize.width - closeItem->getContentSize().width/2 ,
                                 origin.y + closeItem->getContentSize().height/2));
 
-    auto startItem= MenuItemLabel::create(x_label_normal("开始游戏"), CC_CALLBACK_1(HelloWorld::menuCloseCallback, this));
-    startItem->setPosition(Vec2((origin.x + visibleSize.width-startItem->getContentSize().width)/2 ,
-                                (origin.y+visibleSize.width-startItem->getContentSize().height)/2));
+    auto startItem= MenuItemLabel::create(x_label_zh("开始游戏",20), CC_CALLBACK_1(HelloWorld::menuActionCallback, this));
+    startItem->setPosition(visibleSize.width/2.0f,visibleSize.height/2.0f+startItem->getContentSize().height+30);
+    startItem->setTag(MenuItemTag+1);
+    
+    auto settingItem= MenuItemLabel::create(x_label_zh("游戏设置",20), CC_CALLBACK_1(HelloWorld::menuActionCallback, this));
+    settingItem->setPosition(visibleSize.width/2.0f,visibleSize.height/2.0f);
+    settingItem->setTag(MenuItemTag+2);
+    
+    auto aboutItem= MenuItemLabel::create(x_label_zh("关于我们",20), CC_CALLBACK_1(HelloWorld::menuActionCallback, this));
+    aboutItem->setPosition(visibleSize.width/2.0f,visibleSize.height/2.0f-aboutItem->getContentSize().height-30);
+    aboutItem->setTag(MenuItemTag+3);
     
     // create menu, it's an autorelease object
-    auto menu = Menu::create(closeItem, NULL);
+    auto menu = Menu::create(closeItem,startItem,settingItem,aboutItem,NULL);
     menu->setPosition(Vec2::ZERO);
     this->addChild(menu, 1);
-    this->addChild(startItem,2);
 
     /////////////////////////////
     // 3. add your codes below...
@@ -92,9 +99,11 @@ void HelloWorld::menuCloseCallback(Ref* pSender)
 }
 
 
-void HelloWorld::menuStartCallback(cocos2d::Ref *pSender)
+void HelloWorld::menuActionCallback(cocos2d::Ref *pSender)
 {
-    log("顶你个肺");
+    Node *sender=(Node*)pSender;
+    int tag=sender->getTag();
+    log("顶你个肺:%i",tag);
 }
 
 

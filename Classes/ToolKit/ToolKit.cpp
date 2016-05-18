@@ -9,11 +9,14 @@
 #include "ToolKit.h"
 #include "cocos2d.h"
 USING_NS_CC;
-TTFConfig ToolKit::getGlobalTTF()
+TTFConfig ToolKit::getGlobalTTF(int fontSize)
 {
+    if(fontSize<1){
+        fontSize=12;
+    }
     TTFConfig ttfConfig;
     ttfConfig.fontFilePath = "fonts/cn.ttf"; //必须配置
-    ttfConfig.fontSize = 12;
+    ttfConfig.fontSize = fontSize;
     ttfConfig.distanceFieldEnabled = false;
     ttfConfig.outlineSize = 0;
     ttfConfig.glyphs = GlyphCollection::DYNAMIC;
@@ -21,8 +24,18 @@ TTFConfig ToolKit::getGlobalTTF()
     return ttfConfig;
 }
 
+TTFConfig ToolKit::getGlobalTTF()
+{
+    return getGlobalTTF(0);
+}
+
 Label* ToolKit::createLabel(const std::string& text)
 {
-    Label *label=Label::createWithTTF(getGlobalTTF(), text);
+    return createLabel(text, 0);
+}
+Label* ToolKit::createLabel(const std::string& text,int fontSize)
+{
+    Label *label=Label::createWithTTF(getGlobalTTF(fontSize), text);
     return label;
+    
 }

@@ -1,6 +1,6 @@
 #include "HelloWorldScene.h"
 #include "SimpleAudioEngine.h"
-
+#include "ToolKit.h"
 USING_NS_CC;
 
 Scene* HelloWorld::createScene()
@@ -44,10 +44,15 @@ bool HelloWorld::init()
     closeItem->setPosition(Vec2(origin.x + visibleSize.width - closeItem->getContentSize().width/2 ,
                                 origin.y + closeItem->getContentSize().height/2));
 
+    auto startItem= MenuItemLabel::create(x_label_normal("开始游戏"), CC_CALLBACK_1(HelloWorld::menuCloseCallback, this));
+    startItem->setPosition(Vec2((origin.x + visibleSize.width-startItem->getContentSize().width)/2 ,
+                                (origin.y+visibleSize.width-startItem->getContentSize().height)/2));
+    
     // create menu, it's an autorelease object
     auto menu = Menu::create(closeItem, NULL);
     menu->setPosition(Vec2::ZERO);
     this->addChild(menu, 1);
+    this->addChild(startItem,2);
 
     /////////////////////////////
     // 3. add your codes below...
@@ -55,7 +60,7 @@ bool HelloWorld::init()
     // add a label shows "Hello World"
     // create and initialize a label
     
-    auto label = Label::createWithTTF("Hello World", "fonts/Marker Felt.ttf", 24);
+    auto label = Label::createWithTTF("League of Defend", "fonts/Marker Felt.ttf", 24);
     
     // position the label on the center of the screen
     label->setPosition(Vec2(origin.x + visibleSize.width/2,
@@ -65,7 +70,7 @@ bool HelloWorld::init()
     this->addChild(label, 1);
 
     // add "HelloWorld" splash screen"
-    auto sprite = Sprite::create("HelloWorld.png");
+    auto sprite = Sprite::create("LaunchCeneBackgroud.png");
 
     // position the sprite on the center of the screen
     sprite->setPosition(Vec2(visibleSize.width/2 + origin.x, visibleSize.height/2 + origin.y));
@@ -85,3 +90,15 @@ void HelloWorld::menuCloseCallback(Ref* pSender)
     exit(0);
 #endif
 }
+
+
+void HelloWorld::menuStartCallback(cocos2d::Ref *pSender)
+{
+    log("顶你个肺");
+}
+
+
+
+
+
+

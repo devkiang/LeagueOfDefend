@@ -107,7 +107,7 @@ void MainMenuScene::menuActionCallback(cocos2d::Ref *pSender)
         case 1:
         {
             auto scene =ChooseMapScene::createScene();
-            Director::getInstance()->replaceScene(TransitionFadeTR::create(0.5, scene));
+            Director::getInstance()->replaceScene(TransitionFadeBL::create(0.5, scene));
             //            Director::getInstance()->replaceScene(scene);
 
         }

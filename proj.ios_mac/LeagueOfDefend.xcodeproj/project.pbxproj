@@ -35,6 +35,7 @@
 		503AE10217EB989F00D1A890 /* RootViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 503AE0FF17EB989F00D1A890 /* RootViewController.mm */; };
 		503AE10517EB98FF00D1A890 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 503AE10317EB98FF00D1A890 /* main.cpp */; };
 		503AE11B17EB9C5A00D1A890 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 503AE11A17EB9C5A00D1A890 /* IOKit.framework */; };
+		5074D5DB1CEEDF9E00D8D868 /* ChooseSummonerScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5074D5D91CEEDF9E00D8D868 /* ChooseSummonerScene.cpp */; };
 		5087E76317EB910900C73F5D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
 		5087E76717EB910900C73F5D /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB412928DE900B8313A /* libz.dylib */; };
 		5087E76817EB910900C73F5D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF1C47EA1293683800B63C5D /* QuartzCore.framework */; };
@@ -149,6 +150,8 @@
 		503AE10417EB98FF00D1A890 /* Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Prefix.pch; path = mac/Prefix.pch; sourceTree = "<group>"; };
 		503AE11117EB99EE00D1A890 /* libcurl.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libcurl.dylib; path = usr/lib/libcurl.dylib; sourceTree = SDKROOT; };
 		503AE11A17EB9C5A00D1A890 /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
+		5074D5D91CEEDF9E00D8D868 /* ChooseSummonerScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ChooseSummonerScene.cpp; sourceTree = "<group>"; };
+		5074D5DA1CEEDF9E00D8D868 /* ChooseSummonerScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChooseSummonerScene.h; sourceTree = "<group>"; };
 		5087E76F17EB910900C73F5D /* LeagueOfDefend-desktop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "LeagueOfDefend-desktop.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5087E77217EB970100C73F5D /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		5087E77317EB970100C73F5D /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
@@ -339,6 +342,8 @@
 			children = (
 				50204C641CEC5929000A95FC /* ChooseMapScene.cpp */,
 				50204C651CEC5929000A95FC /* ChooseMapScene.h */,
+				5074D5D91CEEDF9E00D8D868 /* ChooseSummonerScene.cpp */,
+				5074D5DA1CEEDF9E00D8D868 /* ChooseSummonerScene.h */,
 			);
 			path = Scene;
 			sourceTree = "<group>";
@@ -562,6 +567,7 @@
 				503AE10017EB989F00D1A890 /* AppController.mm in Sources */,
 				503AE10217EB989F00D1A890 /* RootViewController.mm in Sources */,
 				50204C661CEC5929000A95FC /* ChooseMapScene.cpp in Sources */,
+				5074D5DB1CEEDF9E00D8D868 /* ChooseSummonerScene.cpp in Sources */,
 				50204C5C1CEC085F000A95FC /* ToolKit.cpp in Sources */,
 				503AE10117EB989F00D1A890 /* main.m in Sources */,
 			);

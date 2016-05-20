@@ -130,12 +130,12 @@
 		46880B8519C43A87006E1F66 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		46880B8619C43A87006E1F66 /* MainMenuScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MainMenuScene.cpp; sourceTree = "<group>"; };
 		46880B8719C43A87006E1F66 /* MainMenuScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainMenuScene.h; sourceTree = "<group>"; };
-		50204C531CEC0781000A95FC /* LODConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LODConfig.h; sourceTree = "<group>"; };
+		50204C531CEC0781000A95FC /* LODConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LODConfig.h; sourceTree = "<group>"; };
 		50204C5A1CEC085F000A95FC /* ToolKit.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ToolKit.cpp; sourceTree = "<group>"; };
 		50204C5B1CEC085F000A95FC /* ToolKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ToolKit.h; sourceTree = "<group>"; };
 		50204C5F1CEC4F3E000A95FC /* LaunchCeneBackgroud.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LaunchCeneBackgroud.png; sourceTree = "<group>"; };
 		50204C641CEC5929000A95FC /* ChooseMapScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ChooseMapScene.cpp; sourceTree = "<group>"; };
-		50204C651CEC5929000A95FC /* ChooseMapScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChooseMapScene.h; sourceTree = "<group>"; };
+		50204C651CEC5929000A95FC /* ChooseMapScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = ChooseMapScene.h; sourceTree = "<group>"; };
 		50204C671CEC6767000A95FC /* ChooseMapBg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ChooseMapBg.png; sourceTree = "<group>"; };
 		50204C6C1CEC6B52000A95FC /* back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back.png; sourceTree = "<group>"; };
 		503AE0F617EB97AB00D1A890 /* Icon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = Icon.icns; sourceTree = "<group>"; };

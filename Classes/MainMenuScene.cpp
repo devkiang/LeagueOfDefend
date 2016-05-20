@@ -1,4 +1,4 @@
-#include "MainMenuScene.h"
+﻿#include "MainMenuScene.h"
 #include "SimpleAudioEngine.h"
 #include "Scene/ChooseMapScene.h"
 USING_NS_CC;

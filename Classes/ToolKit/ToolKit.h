@@ -10,6 +10,7 @@
 #define ToolKit_hpp
 
 #include <stdio.h>
+#include <cocos2d.h>
 #define x_label_zh(msg,fontSize) (new ToolKit())->createLabel(msg,fontSize)
 class ToolKit
 {

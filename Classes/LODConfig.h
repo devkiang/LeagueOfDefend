@@ -9,6 +9,6 @@
 #ifndef LODConfig_h
 #define LODConfig_h
 #include "cocos2d.h"
-#include "ToolKit.h"
+#include "ToolKit\ToolKit.h"
 
 #endif /* LODConfig_h */

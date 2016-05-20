@@ -37,7 +37,7 @@ bool ChooseMapScene::init()
     auto visibleSize = Director::getInstance()->getVisibleSize();
     Vec2 origin = Director::getInstance()->getVisibleOrigin();
     
-    auto titleLabel=x_label_zh("请选择您要玩耍的地图", 20);
+    auto titleLabel=x_label_zh("请选择您要玩耍的地图,啊啊哈", 20);
     titleLabel->setPosition(visibleSize.width/2.0, visibleSize.height-titleLabel->getContentSize().height);
     this->addChild(titleLabel,2);
     auto backSprite=MenuItemImage::create("back.png", "back.png",CC_CALLBACK_1(ChooseMapScene::backActionCallback, this));

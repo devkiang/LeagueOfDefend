@@ -1,4 +1,4 @@
-﻿#include "MainMenuScene.h"
+#include "MainMenuScene.h"
 #include "SimpleAudioEngine.h"
 #include "Scene/ChooseMapScene.h"
 USING_NS_CC;
@@ -44,7 +44,7 @@ bool MainMenuScene::init()
     closeItem->setPosition(Vec2(origin.x + visibleSize.width - closeItem->getContentSize().width/2 ,
                                 origin.y + closeItem->getContentSize().height/2));
 
-    auto startItem= MenuItemLabel::create(x_label_zh("开始游戏",20), CC_CALLBACK_1(MainMenuScene::menuActionCallback, this));
+    auto startItem= MenuItemLabel::create(x_label_zh("xx123",20), CC_CALLBACK_1(MainMenuScene::menuActionCallback, this));
     startItem->setPosition(visibleSize.width/2.0f,visibleSize.height/2.0f+startItem->getContentSize().height+30);
     startItem->setTag(MenuItemTag+1);
     
@@ -64,10 +64,10 @@ bool MainMenuScene::init()
     /////////////////////////////
     // 3. add your codes below...
 
-    // add a label shows "Hello World"
-    // create and initialize a label
+    // add a label shows "Hello World" x_label_zh("英雄守护", 20);
+    // create and initialize a label Label::createWithTTF("League of Defend", "fonts/Marker Felt.ttf", 24);
     
-    auto label = Label::createWithTTF("League of Defend", "fonts/Marker Felt.ttf", 24);
+	auto label = Label::createWithTTF("League of Defend", "fonts/Marker Felt.ttf", 24); 
     
     // position the label on the center of the screen
     label->setPosition(Vec2(origin.x + visibleSize.width/2,

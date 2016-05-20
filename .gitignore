@@ -1,3 +1,13 @@
 /cocos2d/*
+/proj.win32/*
+/.idea/*
+*.filters
+*.vcxproj
 *.xcuserstate
+*.tlog
 /proj.ios_mac/LeagueOfDefend.xcodeproj/project.xcworkspace/xcuserdata/*
+/proj.android-studio/app/gen/*
+/proj.android/*
+/proj.win10/*
+/proj.win8.1-universal/*
+/proj.linux/*

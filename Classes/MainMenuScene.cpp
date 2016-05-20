@@ -1,6 +1,6 @@
 #include "MainMenuScene.h"
 #include "SimpleAudioEngine.h"
-#include "ChooseMapScene.h"
+#include "Scene\ChooseMapScene.h"
 USING_NS_CC;
 
 Scene* MainMenuScene::createScene()
@@ -44,15 +44,15 @@ bool MainMenuScene::init()
     closeItem->setPosition(Vec2(origin.x + visibleSize.width - closeItem->getContentSize().width/2 ,
                                 origin.y + closeItem->getContentSize().height/2));
 
-    auto startItem= MenuItemLabel::create(x_label_zh("å¼€å§‹æ¸¸æˆ",20), CC_CALLBACK_1(MainMenuScene::menuActionCallback, this));
+    auto startItem= MenuItemLabel::create(x_label_zh("¿ªÊ¼ÓÎÏ·",20), CC_CALLBACK_1(MainMenuScene::menuActionCallback, this));
     startItem->setPosition(visibleSize.width/2.0f,visibleSize.height/2.0f+startItem->getContentSize().height+30);
     startItem->setTag(MenuItemTag+1);
     
-    auto settingItem= MenuItemLabel::create(x_label_zh("æ¸¸æˆè®¾ç½®",20), CC_CALLBACK_1(MainMenuScene::menuActionCallback, this));
+    auto settingItem= MenuItemLabel::create(x_label_zh("ÓÎÏ·ÉèÖÃ",20), CC_CALLBACK_1(MainMenuScene::menuActionCallback, this));
     settingItem->setPosition(visibleSize.width/2.0f,visibleSize.height/2.0f);
     settingItem->setTag(MenuItemTag+2);
     
-    auto aboutItem= MenuItemLabel::create(x_label_zh("å…³äºæˆ‘ä»¬",20), CC_CALLBACK_1(MainMenuScene::menuActionCallback, this));
+    auto aboutItem= MenuItemLabel::create(x_label_zh("¹ØÓÚÎÒÃÇ",20), CC_CALLBACK_1(MainMenuScene::menuActionCallback, this));
     aboutItem->setPosition(visibleSize.width/2.0f,visibleSize.height/2.0f-aboutItem->getContentSize().height-30);
     aboutItem->setTag(MenuItemTag+3);
     

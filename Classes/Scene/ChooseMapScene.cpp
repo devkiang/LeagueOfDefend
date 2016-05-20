@@ -7,7 +7,7 @@
 //
 
 #include "ChooseMapScene.h"
-#include "HelloWorldScene.h"
+#include "MainMenuScene.h"
 USING_NS_CC;
 
 Scene* ChooseMapScene::createScene()
@@ -37,7 +37,7 @@ bool ChooseMapScene::init()
     auto visibleSize = Director::getInstance()->getVisibleSize();
     Vec2 origin = Director::getInstance()->getVisibleOrigin();
     
-    auto titleLabel=x_label_zh("召唤师，请选择您要厮杀的地图", 20);
+    auto titleLabel=x_label_zh("请选择您要玩耍的地图", 20);
     titleLabel->setPosition(visibleSize.width/2.0, visibleSize.height-titleLabel->getContentSize().height);
     this->addChild(titleLabel,2);
     auto backSprite=MenuItemImage::create("back.png", "back.png",CC_CALLBACK_1(ChooseMapScene::backActionCallback, this));
@@ -59,7 +59,7 @@ bool ChooseMapScene::init()
 
 void ChooseMapScene::backActionCallback(cocos2d::Ref *pSender)
 {
-    auto scene =HelloWorld::createScene();
-    Director::getInstance()->replaceScene(TransitionCrossFade::create(0.5, scene));
+    auto scene =MainMenuScene::createScene();
+    Director::getInstance()->replaceScene(TransitionFadeBL::create(0.5, scene));
     log("fuck");
 }

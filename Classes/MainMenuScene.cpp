@@ -1,15 +1,15 @@
-#include "HelloWorldScene.h"
+#include "MainMenuScene.h"
 #include "SimpleAudioEngine.h"
 #include "ChooseMapScene.h"
 USING_NS_CC;
 
-Scene* HelloWorld::createScene()
+Scene* MainMenuScene::createScene()
 {
     // 'scene' is an autorelease object
     auto scene = Scene::create();
     
     // 'layer' is an autorelease object
-    auto layer = HelloWorld::create();
+    auto layer = MainMenuScene::create();
 
     // add layer as a child to scene
     scene->addChild(layer);
@@ -19,7 +19,7 @@ Scene* HelloWorld::createScene()
 }
 
 // on "init" you need to initialize your instance
-bool HelloWorld::init()
+bool MainMenuScene::init()
 {
     //////////////////////////////
     // 1. super init first
@@ -39,20 +39,20 @@ bool HelloWorld::init()
     auto closeItem = MenuItemImage::create(
                                            "CloseNormal.png",
                                            "CloseSelected.png",
-                                           CC_CALLBACK_1(HelloWorld::menuCloseCallback, this));
+                                           CC_CALLBACK_1(MainMenuScene::menuCloseCallback, this));
     
     closeItem->setPosition(Vec2(origin.x + visibleSize.width - closeItem->getContentSize().width/2 ,
                                 origin.y + closeItem->getContentSize().height/2));
 
-    auto startItem= MenuItemLabel::create(x_label_zh("开始游戏",20), CC_CALLBACK_1(HelloWorld::menuActionCallback, this));
+    auto startItem= MenuItemLabel::create(x_label_zh("开始游戏",20), CC_CALLBACK_1(MainMenuScene::menuActionCallback, this));
     startItem->setPosition(visibleSize.width/2.0f,visibleSize.height/2.0f+startItem->getContentSize().height+30);
     startItem->setTag(MenuItemTag+1);
     
-    auto settingItem= MenuItemLabel::create(x_label_zh("游戏设置",20), CC_CALLBACK_1(HelloWorld::menuActionCallback, this));
+    auto settingItem= MenuItemLabel::create(x_label_zh("游戏设置",20), CC_CALLBACK_1(MainMenuScene::menuActionCallback, this));
     settingItem->setPosition(visibleSize.width/2.0f,visibleSize.height/2.0f);
     settingItem->setTag(MenuItemTag+2);
     
-    auto aboutItem= MenuItemLabel::create(x_label_zh("关于我们",20), CC_CALLBACK_1(HelloWorld::menuActionCallback, this));
+    auto aboutItem= MenuItemLabel::create(x_label_zh("关于我们",20), CC_CALLBACK_1(MainMenuScene::menuActionCallback, this));
     aboutItem->setPosition(visibleSize.width/2.0f,visibleSize.height/2.0f-aboutItem->getContentSize().height-30);
     aboutItem->setTag(MenuItemTag+3);
     
@@ -89,7 +89,7 @@ bool HelloWorld::init()
 }
 
 
-void HelloWorld::menuCloseCallback(Ref* pSender)
+void MainMenuScene::menuCloseCallback(Ref* pSender)
 {
     Director::getInstance()->end();
 
@@ -99,7 +99,7 @@ void HelloWorld::menuCloseCallback(Ref* pSender)
 }
 
 
-void HelloWorld::menuActionCallback(cocos2d::Ref *pSender)
+void MainMenuScene::menuActionCallback(cocos2d::Ref *pSender)
 {
     Node *sender=(Node*)pSender;
     int tag=sender->getTag();
@@ -107,7 +107,7 @@ void HelloWorld::menuActionCallback(cocos2d::Ref *pSender)
         case 1:
         {
             auto scene =ChooseMapScene::createScene();
-            Director::getInstance()->replaceScene(TransitionCrossFade::create(0.5, scene));
+            Director::getInstance()->replaceScene(TransitionFadeTR::create(0.5, scene));
             //            Director::getInstance()->replaceScene(scene);
 
         }

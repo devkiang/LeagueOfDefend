@@ -4,7 +4,6 @@
 
 #include "LODConfig.h"
 #define MenuItemTag 10
-
 class MainMenuScene : public cocos2d::Layer
 {
 public:

@@ -18,6 +18,7 @@ public:
     virtual bool init();
     static cocos2d::Scene* createScene();
     void backActionCallback(cocos2d::Ref* pSender);
+	void mapActionCallback(cocos2d::Ref* pSender);
     CREATE_FUNC(ChooseMapScene);
 };
 #endif /* ChooseMapScene_hpp */

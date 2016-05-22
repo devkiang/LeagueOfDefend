@@ -8,6 +8,7 @@
 
 #include "ChooseMapScene.h"
 #include "MainMenuScene.h"
+#include "ChooseLeague.h"
 USING_NS_CC;
 
 Scene* ChooseMapScene::createScene()
@@ -37,7 +38,7 @@ bool ChooseMapScene::init()
     auto visibleSize = Director::getInstance()->getVisibleSize();
     Vec2 origin = Director::getInstance()->getVisibleOrigin();
     
-    auto titleLabel=x_label_zh("请选择您要玩耍的地图,啊啊哈", 20);
+    auto titleLabel=x_label_zh(xml_string("chooce_map_title"), 20);
     titleLabel->setPosition(visibleSize.width/2.0, visibleSize.height-titleLabel->getContentSize().height);
     this->addChild(titleLabel,2);
     auto backSprite=MenuItemImage::create("back.png", "back.png",CC_CALLBACK_1(ChooseMapScene::backActionCallback, this));
@@ -45,8 +46,25 @@ bool ChooseMapScene::init()
     auto menu=Menu::create(backSprite, NULL);
      menu->setPosition(Vec2::ZERO);
     this->addChild(menu,1);
-    
-    
+	auto mapSprite1 = MenuItemImage::create("level01_map.png", "level01_map.png", CC_CALLBACK_1(ChooseMapScene::mapActionCallback, this));
+	auto mapSprite2 = MenuItemImage::create("level02_map.png", "level01_map.png", CC_CALLBACK_1(ChooseMapScene::mapActionCallback, this));
+	mapSprite1->setAnchorPoint(Point(0.5,0.5));
+	mapSprite2->setAnchorPoint(Point(0.5, 0.5));
+	mapSprite1->setTag(0);
+	mapSprite2->setTag(1);
+	float mapW = mapSprite1->getContentSize().width;
+	float mapH = mapSprite1->getContentSize().height;
+
+	mapSprite1->setPosition(visibleSize.width / 2 - mapW/2 -15, visibleSize.height / 2);
+	mapSprite2->setPosition(visibleSize.width / 2 + mapW / 2 + 15, visibleSize.height / 2);
+
+	
+	auto menu1 = Menu::create(mapSprite1, NULL);
+	auto menu2 = Menu::create(mapSprite2, NULL);
+	menu1->setPosition(Vec2::ZERO);
+	menu2->setPosition(Vec2::ZERO);
+	this->addChild(menu1, 2);
+	this->addChild(menu2, 2);
     auto bgSprite=Sprite::create("ChooseMapBg.png");
     
     bgSprite->setPosition(Vec2(visibleSize.width/2 + origin.x, visibleSize.height/2 + origin.y));
@@ -61,5 +79,33 @@ void ChooseMapScene::backActionCallback(cocos2d::Ref *pSender)
 {
     auto scene =MainMenuScene::createScene();
     Director::getInstance()->replaceScene(TransitionFade::create(0.5, scene));
-    log("fuck");
+}
+void ChooseMapScene::mapActionCallback(cocos2d::Ref *pSender){
+	Node *sender = (Node*)pSender;
+	int tag = sender->getTag();
+	log("fuck" + tag);
+	switch (tag) {
+	case 0:
+	{
+			  log("fuck"+tag);
+			  auto scene = ChooseLeague::createScene();
+			  Director::getInstance()->replaceScene(TransitionFade::create(0.5, scene));
+	}
+		break;
+	case 1:
+	{
+
+	}
+		break;
+
+	case 3:
+	{
+
+	}
+		break;
+
+
+	default:
+		break;
+	}
 }

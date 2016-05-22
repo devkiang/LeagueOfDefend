@@ -13,9 +13,14 @@ LOCAL_MODULE_FILENAME := libMyGame
 
 LOCAL_SRC_FILES := hellocpp/main.cpp \
                    ../../Classes/AppDelegate.cpp \
-                   ../../Classes/HelloWorldScene.cpp
+                   ../../Classes/Scene/MainMenuScene.cpp \
+				   ../../Classes/Scene/ChooseSummonerScene.cpp \
+				   ../../Classes/Scene/ChooseMapScene.cpp \
+				   ../../Classes/ToolKit/ToolKit.cpp
 
 LOCAL_C_INCLUDES := $(LOCAL_PATH)/../../Classes
+LOCAL_C_INCLUDES += $(LOCAL_PATH)/../../Classes/Scene
+LOCAL_C_INCLUDES += $(LOCAL_PATH)/../../Classes/ToolKit
 
 # _COCOS_HEADER_ANDROID_BEGIN
 # _COCOS_HEADER_ANDROID_END

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<plist version="1.0">
+ <dict>
+      <key>start_game</key>
+      <string>开始游戏</string>
+      <key>about</key>
+      <string>关于我们</string>
+      <key>game_setting</key>
+      <string>游戏设置</string>
+   <key>chooce_map_title</key>
+   <string>选择地图</string>
+   <key>chooce_league_title</key>
+   <string>选择召唤师</string>
+    </dict>
+</plist>

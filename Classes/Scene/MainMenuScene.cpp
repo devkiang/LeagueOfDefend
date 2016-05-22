@@ -43,16 +43,20 @@ bool MainMenuScene::init()
     
     closeItem->setPosition(Vec2(origin.x + visibleSize.width - closeItem->getContentSize().width / 2,
                                 origin.y + closeItem->getContentSize().height / 2));
-    
-    auto startItem = MenuItemLabel::create(x_label_zh("开始游戏", 20), CC_CALLBACK_1(MainMenuScene::menuActionCallback, this));
+	//strings = FileUtils::getInstance()->getValueMapFromFile("fonts/strings.xml");
+	std::string startGame = xml_string("start_game");
+	std::string game_setting = xml_string("game_setting");
+	std::string about = xml_string("about");
+
+	auto startItem = MenuItemLabel::create(x_label_zh(startGame, 20), CC_CALLBACK_1(MainMenuScene::menuActionCallback, this));
     startItem->setPosition(visibleSize.width / 2.0f, visibleSize.height / 2.0f + startItem->getContentSize().height + 30);
     startItem->setTag(MenuItemTag + 1);
-    
-    auto settingItem = MenuItemLabel::create(x_label_zh("游戏设置", 20), CC_CALLBACK_1(MainMenuScene::menuActionCallback, this));
+
+	auto settingItem = MenuItemLabel::create(x_label_zh(game_setting, 20), CC_CALLBACK_1(MainMenuScene::menuActionCallback, this));
     settingItem->setPosition(visibleSize.width / 2.0f, visibleSize.height / 2.0f);
     settingItem->setTag(MenuItemTag + 2);
     
-    auto aboutItem = MenuItemLabel::create(x_label_zh("关于我们", 20), CC_CALLBACK_1(MainMenuScene::menuActionCallback, this));
+	auto aboutItem = MenuItemLabel::create(x_label_zh(about, 20), CC_CALLBACK_1(MainMenuScene::menuActionCallback, this));
     aboutItem->setPosition(visibleSize.width / 2.0f, visibleSize.height / 2.0f - aboutItem->getContentSize().height - 30);
     aboutItem->setTag(MenuItemTag + 3);
     

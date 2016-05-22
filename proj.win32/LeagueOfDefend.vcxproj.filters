@@ -27,7 +27,10 @@
     <ClCompile Include="..\Classes\ToolKit\ToolKit.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="..\Classes\MainMenuScene.cpp">
+    <ClCompile Include="..\Classes\Scene\MainMenuScene.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Scene\ChooseLeague.cpp">
       <Filter>src</Filter>
     </ClCompile>
   </ItemGroup>
@@ -50,7 +53,10 @@
     <ClInclude Include="..\Classes\ToolKit\ToolKit.h">
       <Filter>src</Filter>
     </ClInclude>
-    <ClInclude Include="..\Classes\MainMenuScene.h">
+    <ClInclude Include="..\Classes\Scene\MainMenuScene.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Scene\ChooseLeague.h">
       <Filter>src</Filter>
     </ClInclude>
   </ItemGroup>
@@ -58,5 +64,39 @@
     <ResourceCompile Include="game.rc">
       <Filter>resource</Filter>
     </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="..\Resources\explosion1.png">
+      <Filter>resource</Filter>
+    </Image>
+    <Image Include="..\Resources\level01.png">
+      <Filter>resource</Filter>
+    </Image>
+    <Image Include="..\Resources\level01_map.png">
+      <Filter>resource</Filter>
+    </Image>
+    <Image Include="..\Resources\level02.png">
+      <Filter>resource</Filter>
+    </Image>
+    <Image Include="..\Resources\level02_map.png">
+      <Filter>resource</Filter>
+    </Image>
+    <Image Include="..\Resources\Wolfman_InfiniteDuress.png">
+      <Filter>resource</Filter>
+    </Image>
+    <Image Include="..\Resources\XenZhao_BattleCry.png">
+      <Filter>resource</Filter>
+    </Image>
+    <Image Include="..\Resources\XenZhao_Charge.png">
+      <Filter>resource</Filter>
+    </Image>
+    <Image Include="..\Resources\Zilean_Passive.png">
+      <Filter>resource</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <Xml Include="..\Resources\fonts\strings.xml">
+      <Filter>resource</Filter>
+    </Xml>
   </ItemGroup>
 </Project>

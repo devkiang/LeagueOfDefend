@@ -39,3 +39,8 @@ Label* ToolKit::createLabel(const std::string& text,int fontSize)
     return label;
     
 }
+std::string ToolKit::getSring(const std::string& text){
+	auto strings = FileUtils::getInstance()->getValueMapFromFile("fonts/strings.xml");
+	std::string string = strings[text].asString();
+	return string;
+}

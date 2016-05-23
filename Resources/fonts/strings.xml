@@ -1,15 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <plist version="1.0">
- <dict>
-      <key>start_game</key>
-      <string>开始游戏</string>
-      <key>about</key>
-      <string>关于我们</string>
-      <key>game_setting</key>
-      <string>游戏设置</string>
-   <key>chooce_map_title</key>
-   <string>选择地图</string>
-   <key>chooce_league_title</key>
-   <string>选择召唤师</string>
+    <dict>
+        <key>start_game</key>
+        <string>开始游戏</string>
+        <key>about</key>
+        <string>关于我们</string>
+        <key>game_setting</key>
+        <string>游戏设置</string>
+        <key>chooce_map_title</key>
+        <string>选择地图</string>
+        <key>chooce_league_title</key>
+        <string>选择召唤师</string>
+        <!-- 召唤师简介、名称、特性描述 begin-->
+        <key>league_detail_name_001</key>
+        <string>白召唤师</string><!--白召唤师-->
+        <key>league_detail_description_001</key>
+        <string>公元456年，穿越时空过来的，很牛逼,很牛逼,很牛逼,很牛逼,很牛逼。</string>
+        <key>league_detail_specific_001</key>
+        <string>10%概率使超级防御塔进行一次冰冻攻击，造成215(物理伤害)+当前等级*60(魔法伤害)</string>
+        <key>league_detail_name_002</key>
+        <string>黑召唤师</string><!--黑召唤师-->
+        <key>league_detail_description_002</key>
+        <string>公元456年，穿越时空过来的，不牛逼,不牛逼,不牛逼,不牛逼,不牛逼。</string>
+        <key>league_detail_specific_002</key>
+        <string>10%概率使超级防御塔进行一次火攻击，造成215(物理伤害)+当前等级*60(魔法伤害),被击中的敌人会被灼烧，并让受到伤害的敌人十秒内造成200(模仿伤害)点的额外伤害</string>
+        <!-- 召唤师简介、名称、特性描述 end-->
     </dict>
 </plist>

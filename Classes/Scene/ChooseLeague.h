@@ -12,5 +12,7 @@ public:
 	void backActionCallback(cocos2d::Ref* pSender);
 	void mapActionCallback(cocos2d::Ref* pSender);
 	CREATE_FUNC(ChooseLeague);
+    cocos2d::Sprite* zhaoxinSprite;
+    
 };
 #endif /* ChooseMapScene_hpp */

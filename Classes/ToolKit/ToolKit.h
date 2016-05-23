@@ -11,8 +11,7 @@
 
 #include <stdio.h>
 #include <cocos2d.h>
-#define x_label_zh(msg,fontSize) (new ToolKit())->createLabel(msg,fontSize)
-#define xml_string(msg) (new ToolKit())->getSring(msg)
+
 class ToolKit
 {
 public:

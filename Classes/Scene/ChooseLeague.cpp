@@ -1,5 +1,6 @@
 #include "ChooseLeague.h"
 #include "ChooseMapScene.h"
+#include "LeagueDetailSprite.h"
 USING_NS_CC;
 
 Scene* ChooseLeague::createScene(){
@@ -40,15 +41,50 @@ bool ChooseLeague::init(){
 
 	this->addChild(mapSprite1, 2);
 	this->addChild(mapSprite2, 2);
+    
+    zhaoxinSprite=Sprite::create("XenZhao_Charge.png");
+    zhaoxinSprite->setPosition(100,100);
+    this->addChild(zhaoxinSprite,3);
 
+    auto listener1 = EventListenerTouchOneByOne::create();
+    // 设置是否吞没事件，在 onTouchBegan 方法返回 true 时吞没
+    listener1->setSwallowTouches(false);
+    listener1->onTouchBegan = [](Touch* touch, Event* event){
+        auto target=static_cast<Sprite*>(event->getCurrentTarget());
+        if(target->getBoundingBox().containsPoint(touch->getLocation()))
+        {
+            log("touch");
+            
+            auto memory=target->getChildByTag(100);
+            if(memory){
+                memory->removeFromParent();
+                memory=NULL;
+                free(memory);
+                return true;
+            }
+            auto layer=new LeagueDetailSprite();
+            layer->setTag(100);
+            layer->init("", "", "");
+            layer->setAnchorPoint(Vec2(target->getContentSize().width,0));
+            layer->setPosition(0,0);
+            
+            
+            
+            log("%f  w:%f",layer->getContentSize().height,layer->getContentSize().width);
+            layer->setPosition(0,target->getContentSize().height);
+            target->addChild(layer);
 
-	auto bgSprite = Sprite::create("ChooseMapBg.png");
+        }
+        return true; // if you are consuming it
+    };
+    _eventDispatcher->addEventListenerWithSceneGraphPriority(listener1, zhaoxinSprite);
+    auto bgSprite = Sprite::create("ChooseMapBg.png");
 
 	bgSprite->setPosition(Vec2(visibleSize.width / 2 + origin.x, visibleSize.height / 2 + origin.y));
 
 	// add the sprite as a child to this layer
 	this->addChild(bgSprite, 0);
-
+    
 	return true;
 }
 

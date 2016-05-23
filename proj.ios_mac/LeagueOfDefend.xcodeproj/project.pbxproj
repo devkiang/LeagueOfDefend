@@ -12,8 +12,6 @@
 		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
 		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
 		288765A50DF7441C002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765A40DF7441C002DB57D /* CoreGraphics.framework */; };
-		3EACC98F19EE6D4300EB3C5E /* res in Resources */ = {isa = PBXBuildFile; fileRef = 3EACC98E19EE6D4300EB3C5E /* res */; };
-		3EACC99019EE6D4300EB3C5E /* res in Resources */ = {isa = PBXBuildFile; fileRef = 3EACC98E19EE6D4300EB3C5E /* res */; };
 		46880B7B19C43A67006E1F66 /* CloseNormal.png in Resources */ = {isa = PBXBuildFile; fileRef = 46880B7619C43A67006E1F66 /* CloseNormal.png */; };
 		46880B7C19C43A67006E1F66 /* CloseNormal.png in Resources */ = {isa = PBXBuildFile; fileRef = 46880B7619C43A67006E1F66 /* CloseNormal.png */; };
 		46880B7D19C43A67006E1F66 /* CloseSelected.png in Resources */ = {isa = PBXBuildFile; fileRef = 46880B7719C43A67006E1F66 /* CloseSelected.png */; };
@@ -27,6 +25,19 @@
 		50204C661CEC5929000A95FC /* ChooseMapScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 50204C641CEC5929000A95FC /* ChooseMapScene.cpp */; };
 		50204C681CEC6767000A95FC /* ChooseMapBg.png in Resources */ = {isa = PBXBuildFile; fileRef = 50204C671CEC6767000A95FC /* ChooseMapBg.png */; };
 		50204C6D1CEC6B52000A95FC /* back.png in Resources */ = {isa = PBXBuildFile; fileRef = 50204C6C1CEC6B52000A95FC /* back.png */; };
+		5021B9AB1CF28F7800FB102E /* ChooseLeague.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5021B9A91CF28F7800FB102E /* ChooseLeague.cpp */; };
+		5021B9B81CF28F8800FB102E /* explosion1.png in Resources */ = {isa = PBXBuildFile; fileRef = 5021B9AD1CF28F8800FB102E /* explosion1.png */; };
+		5021B9B91CF28F8800FB102E /* fonts in Resources */ = {isa = PBXBuildFile; fileRef = 5021B9AE1CF28F8800FB102E /* fonts */; };
+		5021B9BA1CF28F8800FB102E /* level01_map.png in Resources */ = {isa = PBXBuildFile; fileRef = 5021B9AF1CF28F8800FB102E /* level01_map.png */; };
+		5021B9BB1CF28F8800FB102E /* level01.png in Resources */ = {isa = PBXBuildFile; fileRef = 5021B9B01CF28F8800FB102E /* level01.png */; };
+		5021B9BC1CF28F8800FB102E /* level02_map.png in Resources */ = {isa = PBXBuildFile; fileRef = 5021B9B11CF28F8800FB102E /* level02_map.png */; };
+		5021B9BD1CF28F8800FB102E /* level02.png in Resources */ = {isa = PBXBuildFile; fileRef = 5021B9B21CF28F8800FB102E /* level02.png */; };
+		5021B9BE1CF28F8800FB102E /* res in Resources */ = {isa = PBXBuildFile; fileRef = 5021B9B31CF28F8800FB102E /* res */; };
+		5021B9BF1CF28F8800FB102E /* Wolfman_InfiniteDuress.png in Resources */ = {isa = PBXBuildFile; fileRef = 5021B9B41CF28F8800FB102E /* Wolfman_InfiniteDuress.png */; };
+		5021B9C01CF28F8800FB102E /* XenZhao_BattleCry.png in Resources */ = {isa = PBXBuildFile; fileRef = 5021B9B51CF28F8800FB102E /* XenZhao_BattleCry.png */; };
+		5021B9C11CF28F8800FB102E /* XenZhao_Charge.png in Resources */ = {isa = PBXBuildFile; fileRef = 5021B9B61CF28F8800FB102E /* XenZhao_Charge.png */; };
+		5021B9C21CF28F8800FB102E /* Zilean_Passive.png in Resources */ = {isa = PBXBuildFile; fileRef = 5021B9B71CF28F8800FB102E /* Zilean_Passive.png */; };
+		5021B9C51CF2920F00FB102E /* LeagueDetailSprite.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5021B9C31CF2920F00FB102E /* LeagueDetailSprite.cpp */; };
 		503AE0F817EB97AB00D1A890 /* Icon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 503AE0F617EB97AB00D1A890 /* Icon.icns */; };
 		503AE10017EB989F00D1A890 /* AppController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 503AE0FB17EB989F00D1A890 /* AppController.mm */; };
 		503AE10117EB989F00D1A890 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 503AE0FC17EB989F00D1A890 /* main.m */; };
@@ -34,7 +45,6 @@
 		503AE10517EB98FF00D1A890 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 503AE10317EB98FF00D1A890 /* main.cpp */; };
 		503AE11B17EB9C5A00D1A890 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 503AE11A17EB9C5A00D1A890 /* IOKit.framework */; };
 		506BD1311CEF123400859168 /* MainMenuScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 506BD12F1CEF123400859168 /* MainMenuScene.cpp */; };
-		5074D5DB1CEEDF9E00D8D868 /* ChooseSummonerScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5074D5D91CEEDF9E00D8D868 /* ChooseSummonerScene.cpp */; };
 		5087E76317EB910900C73F5D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
 		5087E76717EB910900C73F5D /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB412928DE900B8313A /* libz.dylib */; };
 		5087E76817EB910900C73F5D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF1C47EA1293683800B63C5D /* QuartzCore.framework */; };
@@ -61,8 +71,6 @@
 		50EF62A317ECD613001EB2F8 /* Icon-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 50EF62A117ECD613001EB2F8 /* Icon-50.png */; };
 		521A8E6419F0C34300D177D7 /* Default-667h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 521A8E6219F0C34300D177D7 /* Default-667h@2x.png */; };
 		521A8E6519F0C34300D177D7 /* Default-736h@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 521A8E6319F0C34300D177D7 /* Default-736h@3x.png */; };
-		521A8EA919F11F5000D177D7 /* fonts in Resources */ = {isa = PBXBuildFile; fileRef = 521A8EA819F11F5000D177D7 /* fonts */; };
-		521A8EAA19F11F5000D177D7 /* fonts in Resources */ = {isa = PBXBuildFile; fileRef = 521A8EA819F11F5000D177D7 /* fonts */; };
 		52B47A471A53D09C004E4C60 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52B47A461A53D09B004E4C60 /* Security.framework */; };
 		8262943E1AAF051F00CB7CF7 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8262943D1AAF051F00CB7CF7 /* Security.framework */; };
 		BF171245129291EC00B8313A /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB012928DE900B8313A /* OpenGLES.framework */; };
@@ -121,7 +129,6 @@
 		1D6058910D05DD3D006BFB54 /* LeagueOfDefend-mobile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "LeagueOfDefend-mobile.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		288765A40DF7441C002DB57D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		3EACC98E19EE6D4300EB3C5E /* res */ = {isa = PBXFileReference; lastKnownFileType = folder; path = res; sourceTree = "<group>"; };
 		46880B7619C43A67006E1F66 /* CloseNormal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CloseNormal.png; sourceTree = "<group>"; };
 		46880B7719C43A67006E1F66 /* CloseSelected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CloseSelected.png; sourceTree = "<group>"; };
 		46880B7A19C43A67006E1F66 /* HelloWorld.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HelloWorld.png; sourceTree = "<group>"; };
@@ -135,6 +142,21 @@
 		50204C651CEC5929000A95FC /* ChooseMapScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = ChooseMapScene.h; sourceTree = "<group>"; };
 		50204C671CEC6767000A95FC /* ChooseMapBg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ChooseMapBg.png; sourceTree = "<group>"; };
 		50204C6C1CEC6B52000A95FC /* back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back.png; sourceTree = "<group>"; };
+		5021B9A91CF28F7800FB102E /* ChooseLeague.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ChooseLeague.cpp; sourceTree = "<group>"; };
+		5021B9AA1CF28F7800FB102E /* ChooseLeague.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChooseLeague.h; sourceTree = "<group>"; };
+		5021B9AD1CF28F8800FB102E /* explosion1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = explosion1.png; sourceTree = "<group>"; };
+		5021B9AE1CF28F8800FB102E /* fonts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = fonts; sourceTree = "<group>"; };
+		5021B9AF1CF28F8800FB102E /* level01_map.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = level01_map.png; sourceTree = "<group>"; };
+		5021B9B01CF28F8800FB102E /* level01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = level01.png; sourceTree = "<group>"; };
+		5021B9B11CF28F8800FB102E /* level02_map.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = level02_map.png; sourceTree = "<group>"; };
+		5021B9B21CF28F8800FB102E /* level02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = level02.png; sourceTree = "<group>"; };
+		5021B9B31CF28F8800FB102E /* res */ = {isa = PBXFileReference; lastKnownFileType = folder; path = res; sourceTree = "<group>"; };
+		5021B9B41CF28F8800FB102E /* Wolfman_InfiniteDuress.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Wolfman_InfiniteDuress.png; sourceTree = "<group>"; };
+		5021B9B51CF28F8800FB102E /* XenZhao_BattleCry.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = XenZhao_BattleCry.png; sourceTree = "<group>"; };
+		5021B9B61CF28F8800FB102E /* XenZhao_Charge.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = XenZhao_Charge.png; sourceTree = "<group>"; };
+		5021B9B71CF28F8800FB102E /* Zilean_Passive.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Zilean_Passive.png; sourceTree = "<group>"; };
+		5021B9C31CF2920F00FB102E /* LeagueDetailSprite.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LeagueDetailSprite.cpp; sourceTree = "<group>"; };
+		5021B9C41CF2920F00FB102E /* LeagueDetailSprite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeagueDetailSprite.h; sourceTree = "<group>"; };
 		503AE0F617EB97AB00D1A890 /* Icon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = Icon.icns; sourceTree = "<group>"; };
 		503AE0F717EB97AB00D1A890 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		503AE0FA17EB989F00D1A890 /* AppController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppController.h; path = ios/AppController.h; sourceTree = SOURCE_ROOT; };
@@ -149,8 +171,6 @@
 		503AE11A17EB9C5A00D1A890 /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
 		506BD12F1CEF123400859168 /* MainMenuScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MainMenuScene.cpp; sourceTree = "<group>"; };
 		506BD1301CEF123400859168 /* MainMenuScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainMenuScene.h; sourceTree = "<group>"; };
-		5074D5D91CEEDF9E00D8D868 /* ChooseSummonerScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ChooseSummonerScene.cpp; sourceTree = "<group>"; };
-		5074D5DA1CEEDF9E00D8D868 /* ChooseSummonerScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChooseSummonerScene.h; sourceTree = "<group>"; };
 		5087E76F17EB910900C73F5D /* LeagueOfDefend-desktop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "LeagueOfDefend-desktop.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5087E77217EB970100C73F5D /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		5087E77317EB970100C73F5D /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
@@ -173,7 +193,6 @@
 		50EF62A117ECD613001EB2F8 /* Icon-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-50.png"; sourceTree = "<group>"; };
 		521A8E6219F0C34300D177D7 /* Default-667h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-667h@2x.png"; sourceTree = "<group>"; };
 		521A8E6319F0C34300D177D7 /* Default-736h@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-736h@3x.png"; sourceTree = "<group>"; };
-		521A8EA819F11F5000D177D7 /* fonts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = fonts; sourceTree = "<group>"; };
 		52B47A461A53D09B004E4C60 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.1.sdk/System/Library/Frameworks/Security.framework; sourceTree = DEVELOPER_DIR; };
 		8262943D1AAF051F00CB7CF7 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		BF170DB012928DE900B8313A /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
@@ -307,11 +326,20 @@
 		46880B7519C43A67006E1F66 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				5021B9AD1CF28F8800FB102E /* explosion1.png */,
+				5021B9AE1CF28F8800FB102E /* fonts */,
+				5021B9AF1CF28F8800FB102E /* level01_map.png */,
+				5021B9B01CF28F8800FB102E /* level01.png */,
+				5021B9B11CF28F8800FB102E /* level02_map.png */,
+				5021B9B21CF28F8800FB102E /* level02.png */,
+				5021B9B31CF28F8800FB102E /* res */,
+				5021B9B41CF28F8800FB102E /* Wolfman_InfiniteDuress.png */,
+				5021B9B51CF28F8800FB102E /* XenZhao_BattleCry.png */,
+				5021B9B61CF28F8800FB102E /* XenZhao_Charge.png */,
+				5021B9B71CF28F8800FB102E /* Zilean_Passive.png */,
 				50204C6C1CEC6B52000A95FC /* back.png */,
 				50204C671CEC6767000A95FC /* ChooseMapBg.png */,
 				50204C5F1CEC4F3E000A95FC /* LaunchCeneBackgroud.png */,
-				521A8EA819F11F5000D177D7 /* fonts */,
-				3EACC98E19EE6D4300EB3C5E /* res */,
 				46880B7619C43A67006E1F66 /* CloseNormal.png */,
 				46880B7719C43A67006E1F66 /* CloseSelected.png */,
 				46880B7A19C43A67006E1F66 /* HelloWorld.png */,
@@ -337,10 +365,10 @@
 		50204C461CEBF9CF000A95FC /* Scene */ = {
 			isa = PBXGroup;
 			children = (
+				5021B9A91CF28F7800FB102E /* ChooseLeague.cpp */,
+				5021B9AA1CF28F7800FB102E /* ChooseLeague.h */,
 				50204C641CEC5929000A95FC /* ChooseMapScene.cpp */,
 				50204C651CEC5929000A95FC /* ChooseMapScene.h */,
-				5074D5D91CEEDF9E00D8D868 /* ChooseSummonerScene.cpp */,
-				5074D5DA1CEEDF9E00D8D868 /* ChooseSummonerScene.h */,
 				506BD12F1CEF123400859168 /* MainMenuScene.cpp */,
 				506BD1301CEF123400859168 /* MainMenuScene.h */,
 			);
@@ -350,6 +378,8 @@
 		50204C471CEBF9CF000A95FC /* Spirit */ = {
 			isa = PBXGroup;
 			children = (
+				5021B9C31CF2920F00FB102E /* LeagueDetailSprite.cpp */,
+				5021B9C41CF2920F00FB102E /* LeagueDetailSprite.h */,
 			);
 			path = Spirit;
 			sourceTree = "<group>";
@@ -515,22 +545,31 @@
 				5087E78117EB970100C73F5D /* Icon-120.png in Resources */,
 				5087E78617EB970100C73F5D /* Icon-76.png in Resources */,
 				5087E77F17EB970100C73F5D /* Default@2x.png in Resources */,
+				5021B9B91CF28F8800FB102E /* fonts in Resources */,
+				5021B9C21CF28F8800FB102E /* Zilean_Passive.png in Resources */,
 				50EF629917ECD46A001EB2F8 /* Icon-100.png in Resources */,
 				5087E78317EB970100C73F5D /* Icon-152.png in Resources */,
+				5021B9C01CF28F8800FB102E /* XenZhao_BattleCry.png in Resources */,
+				5021B9C11CF28F8800FB102E /* XenZhao_Charge.png in Resources */,
 				46880B8119C43A67006E1F66 /* HelloWorld.png in Resources */,
 				50204C6D1CEC6B52000A95FC /* back.png in Resources */,
 				46880B7D19C43A67006E1F66 /* CloseSelected.png in Resources */,
+				5021B9B81CF28F8800FB102E /* explosion1.png in Resources */,
 				5087E77D17EB970100C73F5D /* Default-568h@2x.png in Resources */,
 				5087E78517EB970100C73F5D /* Icon-72.png in Resources */,
+				5021B9BE1CF28F8800FB102E /* res in Resources */,
 				521A8E6519F0C34300D177D7 /* Default-736h@3x.png in Resources */,
+				5021B9BF1CF28F8800FB102E /* Wolfman_InfiniteDuress.png in Resources */,
+				5021B9BB1CF28F8800FB102E /* level01.png in Resources */,
 				50204C681CEC6767000A95FC /* ChooseMapBg.png in Resources */,
-				521A8EA919F11F5000D177D7 /* fonts in Resources */,
 				50EF62A317ECD613001EB2F8 /* Icon-50.png in Resources */,
 				5087E78017EB970100C73F5D /* Icon-114.png in Resources */,
 				50EF62A217ECD613001EB2F8 /* Icon-29.png in Resources */,
 				50EF629617ECD46A001EB2F8 /* Icon-40.png in Resources */,
+				5021B9BA1CF28F8800FB102E /* level01_map.png in Resources */,
+				5021B9BC1CF28F8800FB102E /* level02_map.png in Resources */,
 				5087E78217EB970100C73F5D /* Icon-144.png in Resources */,
-				3EACC98F19EE6D4300EB3C5E /* res in Resources */,
+				5021B9BD1CF28F8800FB102E /* level02.png in Resources */,
 				50EF629817ECD46A001EB2F8 /* Icon-80.png in Resources */,
 				50204C601CEC4F3E000A95FC /* LaunchCeneBackgroud.png in Resources */,
 				5087E78417EB970100C73F5D /* Icon-57.png in Resources */,
@@ -547,8 +586,6 @@
 			files = (
 				46880B8219C43A67006E1F66 /* HelloWorld.png in Resources */,
 				503AE0F817EB97AB00D1A890 /* Icon.icns in Resources */,
-				3EACC99019EE6D4300EB3C5E /* res in Resources */,
-				521A8EAA19F11F5000D177D7 /* fonts in Resources */,
 				46880B7C19C43A67006E1F66 /* CloseNormal.png in Resources */,
 				46880B7E19C43A67006E1F66 /* CloseSelected.png in Resources */,
 			);
@@ -563,11 +600,12 @@
 			files = (
 				46880B8819C43A87006E1F66 /* AppDelegate.cpp in Sources */,
 				506BD1311CEF123400859168 /* MainMenuScene.cpp in Sources */,
+				5021B9C51CF2920F00FB102E /* LeagueDetailSprite.cpp in Sources */,
 				503AE10017EB989F00D1A890 /* AppController.mm in Sources */,
 				503AE10217EB989F00D1A890 /* RootViewController.mm in Sources */,
 				50204C661CEC5929000A95FC /* ChooseMapScene.cpp in Sources */,
-				5074D5DB1CEEDF9E00D8D868 /* ChooseSummonerScene.cpp in Sources */,
 				50204C5C1CEC085F000A95FC /* ToolKit.cpp in Sources */,
+				5021B9AB1CF28F7800FB102E /* ChooseLeague.cpp in Sources */,
 				503AE10117EB989F00D1A890 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

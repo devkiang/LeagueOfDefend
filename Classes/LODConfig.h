@@ -12,4 +12,19 @@
 #include "ToolKit/ToolKit.h"
 
 
+#define x_label_zh(msg,fontSize) (new ToolKit())->createLabel(msg,fontSize) //快捷生成支持中文的label
+#define xml_string(msg) (new ToolKit())->getSring(msg)                      //获取xml字段宏
+#define x_release(obj) if(obj){obj->release();obj=NULL;}                    //释放内存宏
+//xml_const
+#define str_league_detail_name_001          "league_detail_name_001"
+#define str_league_detail_specific_001      "league_detail_specific_001"
+#define str_league_detail_description_001   "league_detail_description_001"
+#define str_league_detail_name_002          "league_detail_name_002"
+#define str_league_detail_specific_002      "league_detail_specific_002"
+#define str_league_detail_description_002   "league_detail_description_002"
+#define str_league_detail_name_003          "league_detail_name_003"
+#define str_league_detail_specific_003      "league_detail_specific_003"
+#define str_league_detail_description_003   "league_detail_description_003"
+
+
 #endif /* LODConfig_h */

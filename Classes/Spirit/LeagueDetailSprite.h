@@ -17,6 +17,13 @@ protected:
     cocos2d::Label* specificLabel;
 public:
     ~LeagueDetailSprite();
+    /**
+     创建召唤师简介层
+     
+     @parameter std: name 召唤师名字<br>
+     @parameter std: specific 召唤师特性<br>
+     @parameter std: description 召唤师简介\故事<br>
+     */
     void init(const std::string& name,const std::string& specific,const std::string& description);
     void setNameText(const std::string &name);
     void setSpecificText(const std::string &specificText);

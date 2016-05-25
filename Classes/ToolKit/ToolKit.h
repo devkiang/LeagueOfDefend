@@ -15,11 +15,12 @@
 class ToolKit
 {
 public:
-    cocos2d::TTFConfig getGlobalTTF(int fontSize);
-    cocos2d::TTFConfig getGlobalTTF();
     cocos2d::Label* createLabel(const std::string& text);
     cocos2d::Label* createLabel(const std::string& text,int fontSize);
-	std::string getSring(const std::string& text);
+    cocos2d::Label* createLabel(const std::string& text,int fontSize,std::string& fontPath);
+	static std::string getSring(const std::string& text);
+    static cocos2d::ValueMap xmlValueMap;
+    
 };
 
 #endif /* ToolKit_hpp */

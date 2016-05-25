@@ -19,21 +19,23 @@ void LeagueDetailSprite::init(const std::string &name,const std::string &specifi
 {
     LayerColor::initWithColor(Color4B(0, 0, 0, 255.0f));
     this->setContentSize(Size(100, 100));
-    const Size& size=this->getContentSize();log("size,h:%f,w:%f",size.height,size.width);
-    nameLabel=x_label_zh(xml_string("league_detail_name_001"), 12);
+    const Size& size=this->getContentSize();
+    x_log_size(size);
+    nameLabel=x_label_sys(name, 12);
     nameLabel->setPosition(size.width/2.0,size.height);
-    nameLabel->setAnchorPoint(Vec2(0.5,1));
-//    nameLabel->setDimensions(30, MAXFLOAT);
+    nameLabel->setAnchorPoint(Vec2(.5,1));
     this->addChild(nameLabel);
     
-    descriptionLabel=x_label_zh(xml_string("league_detail_description_001"), 10);
-    descriptionLabel->setPosition(0,nameLabel->getPosition().y-nameLabel->getContentSize().height);
-    descriptionLabel->setAnchorPoint(Vec2(0.0,1));
+    descriptionLabel=x_label_sys(description, 10);
+    descriptionLabel->setPosition(0,x_getPointY(nameLabel)-x_getHeight(nameLabel));
+    descriptionLabel->setAnchorPoint(Vec2(0,1));
+    descriptionLabel->setDimensions(x_getWidth(this), 0);
     this->addChild(descriptionLabel);
     
-    specificLabel=x_label_zh(xml_string(str_league_detail_specific_001), 10);
-    specificLabel->setPosition(0,descriptionLabel->getPosition().y-descriptionLabel->getContentSize().height);
-    specificLabel->setAnchorPoint(Vec2(0.0,1));
+    specificLabel=x_label_sys(specific, 10);
+    specificLabel->setPosition(0,x_getPointY(descriptionLabel)-x_getHeight(descriptionLabel));
+    specificLabel->setAnchorPoint(Vec2(0,1));
+    specificLabel->setDimensions(x_getWidth(this), 0);
     this->addChild(specificLabel);
     
 }

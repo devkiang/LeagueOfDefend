@@ -64,11 +64,9 @@ bool ChooseLeague::init(){
             }
             auto layer=new LeagueDetailSprite();
             layer->setTag(100);
-            layer->init("", "", "");
+            layer->init(xml_string(str_league_detail_name_001),xml_string(str_league_detail_specific_001),xml_string(str_league_detail_description_001));
             layer->setAnchorPoint(Vec2(target->getContentSize().width,0));
             layer->setPosition(0,0);
-            
-            
             
             log("%f  w:%f",layer->getContentSize().height,layer->getContentSize().width);
             layer->setPosition(0,target->getContentSize().height);

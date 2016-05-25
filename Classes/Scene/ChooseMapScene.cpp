@@ -83,11 +83,11 @@ void ChooseMapScene::backActionCallback(cocos2d::Ref *pSender)
 void ChooseMapScene::mapActionCallback(cocos2d::Ref *pSender){
 	Node *sender = (Node*)pSender;
 	int tag = sender->getTag();
-	log("fuck" + tag);
+	log("fuck %d",tag);
 	switch (tag) {
 	case 0:
 	{
-			  log("fuck"+tag);
+			  log("fuck %d",tag);
 			  auto scene = ChooseLeague::createScene();
 			  Director::getInstance()->replaceScene(TransitionFade::create(0.5, scene));
 	}

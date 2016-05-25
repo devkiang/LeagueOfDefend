@@ -10,6 +10,7 @@
 #define LeagueDetailSprite_h
 
 #include "LODConfig.h"
+
 class LeagueDetailSprite :public cocos2d::LayerColor{
 protected:
     cocos2d::Label* nameLabel;

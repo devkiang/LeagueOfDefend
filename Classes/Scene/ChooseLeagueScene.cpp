@@ -15,7 +15,6 @@ bool ChooseLeagueScene::init(){
 	{
 		return false;
 	}
-    //this->registerListener();
 	auto visibleSize = Director::getInstance()->getVisibleSize();
 	Vec2 origin = Director::getInstance()->getVisibleOrigin();
 
@@ -59,14 +58,12 @@ bool ChooseLeagueScene::init(){
 }
 
 
-void ChooseLeagueScene::onClickUp(Sprite * target){
-	if (target == zhaoxinSprite)
+void ChooseLeagueScene::onTouchUp(Sprite * sender){
+	if (sender == zhaoxinSprite)
 	{
 		/*if (target->getBoundingBox().containsPoint(touch->getLocation()))
 		{*/
-		log("touch");
-
-		auto memory = target->getChildByTag(100);
+		auto memory = sender->getChildByTag(100);
 		if (memory){
 			memory->removeFromParent();
 			memory = NULL;
@@ -78,50 +75,23 @@ void ChooseLeagueScene::onClickUp(Sprite * target){
 			auto layer = new LeagueDetailSprite();
 			layer->setTag(100);
 			layer->init(xml_string(str_league_detail_name_001), xml_string(str_league_detail_specific_001), xml_string(str_league_detail_description_001));
-			layer->setAnchorPoint(Vec2(target->getContentSize().width, 0));
+			layer->setAnchorPoint(Vec2(sender->getContentSize().width, 0));
 			layer->setPosition(0, 0);
-
-			log("%f  w:%f", layer->getContentSize().height, layer->getContentSize().width);
-			layer->setPosition(0, target->getContentSize().height);
-			target->addChild(layer);
+			layer->setPosition(0, sender->getContentSize().height);
+			sender->addChild(layer);
 		}
-		
-
-		//}
 	}
-	
+}
+
+void ChooseLeagueScene::onTouchDown(cocos2d::Sprite*)
+{
+    log("down");
 }
 
 void ChooseLeagueScene::backActionCallback(cocos2d::Ref *pSender)
 {
 	auto scene = ChooseMapScene::createScene();
 	Director::getInstance()->replaceScene(TransitionFade::create(0.5, scene));
-}
-void ChooseLeagueScene::mapActionCallback(cocos2d::Ref *pSender){
-	Node *sender = (Node*)pSender;
-	int tag = sender->getTag();
-	switch (tag) {
-	case 0:
-	{
-
-	}
-		break;
-	case 1:
-	{
-
-	}
-		break;
-
-	case 3:
-	{
-
-	}
-		break;
-
-
-	default:
-		break;
-	}
 }
 
 

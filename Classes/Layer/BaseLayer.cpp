@@ -4,7 +4,7 @@ USING_NS_CC;
 void BaseLayer::initEvent(){
 	
 	auto touchLisener = EventListenerTouchOneByOne::create();
-	// ÉèÖÃÊÇ·ñÏòÏÂ´«µÝ´¥Ãþ£¬true±íÊ¾²»ÏòÏÂ´¥Ãþ¡£
+	// â€¦Ã‹Ã·âˆšÂ Â«âˆ‘Ã’Å“ÃšÅ“Â¬Â¥Â´Âµâ€ºÂ¥â€¢âˆšË›Â£Â¨trueÂ±ÃŒÂ Ã¦â‰¤ÂªÅ“ÃšÅ“Â¬Â¥â€¢âˆšË›Â°Â£
 	touchLisener->setSwallowTouches(true);
 	touchLisener->onTouchBegan = CC_CALLBACK_2(BaseLayer::onTouchBegan, this);
 	touchLisener->onTouchEnded = CC_CALLBACK_2(BaseLayer::onTouchEnded, this);
@@ -29,33 +29,74 @@ void BaseLayer::initEvent(){
 		
 	}
 }
+
+/**
+ *  push sprite to array
+ *
+ *  @param sprite node
+ */
+void BaseLayer::pushSprite(Sprite*& sprite){
+    this->sprites.pushBack(sprite);
+}
+
+/**
+ *  åˆ¤æ–­ç²¾çµtouchäº‹ä»¶æ˜¯å¦åœ¨æœ‰æ•ˆèŒƒå›´å†…
+ *
+ *  @param rect  ç²¾çµçš„å¤§å°ä½ç½®
+ *  @param point æœ¬åœ°åæ ‡
+ */
+bool isContainsPoint(Touch *touch, Node *obj)
+{
+    Point locationInNode = obj->convertTouchToNodeSpace(touch);
+    Size size = obj->getContentSize();
+    Rect rect = Rect(0, 0, size.width, size.height);
+    if (rect.containsPoint(locationInNode))//constain true
+    {
+        return true;
+    }
+    return false;
+}
+
+
 bool BaseLayer::onTouchBegan(Touch *touch, Event *event){
-	// 1Ä¿±ê¾«Áé
 	auto target = static_cast<Sprite*>(event->getCurrentTarget());
-	//È«ÆÁµã»÷µÄ·¶Î§
-	Point locationInNode = target->convertTouchToNodeSpace(touch);
-	// 3Ä¿±ê¾«ÁéµÄÎ»ÖÃ´óÐ¡
-	Size size = target->getContentSize();
-	Rect rect = Rect(0, 0, size.width, size.height);
-	// 4È«ÆÁµã»÷µÄ·¶Î§ÊÇ·ñÔÚÄ¿±ê¾«ÁéÉÏ
-	if (rect.containsPoint(locationInNode))
-	{
-		target->setOpacity(180);//ÉèÖÃÍ¸Ã÷¶È
-		return true;
-	}
-	return false;
-	//return onClickDown(target);
+    if(isContainsPoint(touch, target)){
+        target->setOpacity(180);
+        onTouchDown(target);
+        return true;
+    }
+    return false;
 }
 void BaseLayer::onTouchEnded(Touch* touch, Event* event){
 	auto target = static_cast<Sprite*>(event->getCurrentTarget());
-	onClickUp(target);
+    if(isContainsPoint(touch, target)){
+        target->setOpacity(255);
+        onTouchUp(target);
+    }
+}
+#pragma mark- ======= EventTouchDelegate ===========
+/*
+ If subclass inherit from the this class,it is needed to override these methods in a subclass.
+ */
+void BaseLayer::onTouchDown(Sprite *sender){
+
 }
 
-bool BaseLayer::onClickDown(Sprite * target){
-	return true;
+void BaseLayer::onTouchUp(Sprite * sender){
+    
 }
-void BaseLayer::onClickUp(Sprite * target){
+
+void BaseLayer::onLongPressed(Sprite *sender)
+{
+    
 }
-void BaseLayer::pushSprite(Sprite*& sprite){
-	this->sprites.pushBack(sprite);
+
+void BaseLayer::onDoubleTouch(Sprite *sender)
+{
+    
 }
+ void BaseLayer::onMove(Sprite *sender)
+{
+    
+}
+

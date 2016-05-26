@@ -1,20 +1,22 @@
 
 #include "cocos2d.h"
-USING_NS_CC;
 
 class BaseLayer:public cocos2d::Layer
 {
 public:
-	cocos2d::Vector<Sprite*> sprites = Vector<Sprite*>();
+    cocos2d::Vector<cocos2d::Sprite*> sprites = cocos2d::Vector<cocos2d::Sprite*>();
 	virtual void initEvent();
 	CREATE_FUNC(BaseLayer);
 	// 重载触摸回调函数
-	bool onTouchBegan(Touch *touch, Event *event);
-	void onTouchEnded(Touch* touch, Event* event);
-	virtual bool onClickDown(Sprite * target);//手指按下屏幕时在这里判断是否有精灵被点击
-	virtual void onClickUp(Sprite * target);//手指拿起时交给子类去实现
+	bool onTouchBegan(cocos2d::Touch *touch, cocos2d::Event *event);
+	void onTouchEnded(cocos2d::Touch* touch, cocos2d::Event* event);
+	virtual void onTouchDown(cocos2d::Sprite * sender);//手指按下屏幕时在这里判断是否有精灵被点击
+	virtual void onTouchUp(cocos2d::Sprite * sender);//手指拿起时交给子类去实现
+    virtual void onLongPressed(cocos2d::Sprite * sender);
+    virtual void onDoubleTouch(cocos2d::Sprite * sender);
+    virtual void onMove(cocos2d::Sprite * sender);
 	//cocos2d::Vector<Sprite*> pushSprite(const Sprite& sprite);
-	void pushSprite(Sprite*& sprite);
+	void pushSprite(cocos2d::Sprite*& sprite);
 private:
 
 };

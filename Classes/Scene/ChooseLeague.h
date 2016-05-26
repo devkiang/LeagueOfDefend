@@ -15,13 +15,15 @@ public:
 	void mapActionCallback(cocos2d::Ref* pSender);
 	CREATE_FUNC(ChooseLeague);
     cocos2d::Sprite* zhaoxinSprite;
-	bool onClickDown(Sprite * target);
+	cocos2d::Sprite* worftSprite;
+
+	//bool onClickDown(Sprite * target);
 	void onClickUp(Sprite * target);
 private:
-   void registerListener();
+  /* void registerListener();
     bool touchBegan(cocos2d::Touch *touch, cocos2d::Event *unusedEvent);
     bool touchMove(cocos2d::Touch *touch, cocos2d::Event *unusedEvent);
-    bool touchEnd(cocos2d::Touch *touch, cocos2d::Event *unusedEvent);
+    bool touchEnd(cocos2d::Touch *touch, cocos2d::Event *unusedEvent);*/
 
 };
 #endif /* ChooseMapScene_hpp */

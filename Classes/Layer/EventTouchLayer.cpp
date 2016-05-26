@@ -30,9 +30,21 @@ void EventTouchLayer::initEvent(){
 	}
 }
 bool EventTouchLayer::onTouchBegan(Touch *touch, Event *event){
-	// 1
+	// 1目标精灵
 	auto target = static_cast<Sprite*>(event->getCurrentTarget());
-	return onClickDown(target);
+	//全屏点击的范围
+	Point locationInNode = target->convertTouchToNodeSpace(touch);
+	// 3目标精灵的位置大小
+	Size size = target->getContentSize();
+	Rect rect = Rect(0, 0, size.width, size.height);
+	// 4全屏点击的范围是否在目标精灵上
+	if (rect.containsPoint(locationInNode))
+	{
+		target->setOpacity(180);//设置透明度
+		return true;
+	}
+	return false;
+	//return onClickDown(target);
 }
 void EventTouchLayer::onTouchEnded(Touch* touch, Event* event){
 	auto target = static_cast<Sprite*>(event->getCurrentTarget());

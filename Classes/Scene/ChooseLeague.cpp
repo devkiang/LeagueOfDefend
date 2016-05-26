@@ -9,14 +9,14 @@ Scene* ChooseLeague::createScene(){
 	return scene;
 }
 
-void ChooseLeague::registerListener()
-{
-    auto listener1 = EventListenerTouchOneByOne::create();
-    // 设置是否吞没事件，在 onTouchBegan 方法返回 true 时吞没
-    listener1->setSwallowTouches(true);
-    listener1->onTouchBegan = CC_CALLBACK_2(ChooseLeague::touchBegan, this);
-    listener1->onTouchEnded     = CC_CALLBACK_2(ChooseLeague::touchEnd, this);
-    
+//void ChooseLeague::registerListener()
+//{
+//    auto listener1 = EventListenerTouchOneByOne::create();
+//    // 设置是否吞没事件，在 onTouchBegan 方法返回 true 时吞没
+//    listener1->setSwallowTouches(true);
+//    listener1->onTouchBegan = CC_CALLBACK_2(ChooseLeague::touchBegan, this);
+//    listener1->onTouchEnded     = CC_CALLBACK_2(ChooseLeague::touchEnd, this);
+//    
 //    listener1->onTouchBegan = [](Touch* touch, Event* event){
 //        auto target=static_cast<Sprite*>(event->getCurrentTarget());
 //        if(target->getBoundingBox().containsPoint(touch->getLocation()))
@@ -52,15 +52,15 @@ void ChooseLeague::registerListener()
 //        }
 //        return true;
 //    };
-    _eventDispatcher->addEventListenerWithSceneGraphPriority(listener1, this);
-}
+  /*  _eventDispatcher->addEventListenerWithSceneGraphPriority(listener1, this);
+}*/
 
 bool ChooseLeague::init(){
 	if (!Layer::init())
 	{
 		return false;
 	}
-    this->registerListener();
+    //this->registerListener();
 	auto visibleSize = Director::getInstance()->getVisibleSize();
 	Vec2 origin = Director::getInstance()->getVisibleOrigin();
 
@@ -72,8 +72,8 @@ bool ChooseLeague::init(){
 	auto menu = Menu::create(backSprite, NULL);
 	menu->setPosition(Vec2::ZERO);
 	this->addChild(menu, 1);
-	auto mapSprite1 = MenuItemImage::create("Wolfman_InfiniteDuress.png", "Wolfman_InfiniteDuress.png", CC_CALLBACK_1(ChooseLeague::mapActionCallback, this));
-	auto mapSprite2 = MenuItemImage::create("XenZhao_Charge.png", "XenZhao_Charge.png", CC_CALLBACK_1(ChooseLeague::mapActionCallback, this));
+	auto mapSprite1 = Sprite::create("Wolfman_InfiniteDuress.png"); 
+	auto mapSprite2 = Sprite::create("XenZhao_Charge.png"); 
 	mapSprite1->setAnchorPoint(Point(0.5, 0.5));
 	mapSprite2->setAnchorPoint(Point(0.5, 0.5));
 	mapSprite1->setTag(0);
@@ -86,11 +86,11 @@ bool ChooseLeague::init(){
 
 	this->addChild(mapSprite1, 2);
 	this->addChild(mapSprite2, 2);
-    
+	
     zhaoxinSprite=Sprite::create("XenZhao_Charge.png");
     zhaoxinSprite->setPosition(100,100);
     this->addChild(zhaoxinSprite,3);
-
+	pushSprite(mapSprite1);
 	pushSprite(zhaoxinSprite);
 	initEvent();
     //auto listener1 = EventListenerTouchOneByOne::create();
@@ -161,20 +161,51 @@ bool ChooseLeague::init(){
 	return true;
 }
 
-bool ChooseLeague::onClickDown(Sprite * target){
+//bool ChooseLeague::onClickDown(Sprite * target){
+//	if (target == zhaoxinSprite)
+//	{
+//		/*if (target->getBoundingBox().containsPoint(touch->getLocation()))
+//		{*/
+//			log("touch");
+//
+//			auto memory = target->getChildByTag(100);
+//			if (memory){
+//				memory->removeFromParent();
+//				memory = NULL;
+//				free(memory);
+//				return true;
+//			}
+//			auto layer = new LeagueDetailSprite();
+//			layer->setTag(100);
+//			layer->init(xml_string(str_league_detail_name_001), xml_string(str_league_detail_specific_001), xml_string(str_league_detail_description_001));
+//			layer->setAnchorPoint(Vec2(target->getContentSize().width, 0));
+//			layer->setPosition(0, 0);
+//
+//			log("%f  w:%f", layer->getContentSize().height, layer->getContentSize().width);
+//			layer->setPosition(0, target->getContentSize().height);
+//			target->addChild(layer);
+//
+//		//}
+//	}
+//	return true;
+//
+//}
+void ChooseLeague::onClickUp(Sprite * target){
 	if (target == zhaoxinSprite)
 	{
 		/*if (target->getBoundingBox().containsPoint(touch->getLocation()))
 		{*/
-			log("touch");
+		log("touch");
 
-			auto memory = target->getChildByTag(100);
-			if (memory){
-				memory->removeFromParent();
-				memory = NULL;
-				free(memory);
-				return true;
-			}
+		auto memory = target->getChildByTag(100);
+		if (memory){
+			memory->removeFromParent();
+			memory = NULL;
+			free(memory);
+			
+		}
+		else
+		{
 			auto layer = new LeagueDetailSprite();
 			layer->setTag(100);
 			layer->init(xml_string(str_league_detail_name_001), xml_string(str_league_detail_specific_001), xml_string(str_league_detail_description_001));
@@ -184,13 +215,12 @@ bool ChooseLeague::onClickDown(Sprite * target){
 			log("%f  w:%f", layer->getContentSize().height, layer->getContentSize().width);
 			layer->setPosition(0, target->getContentSize().height);
 			target->addChild(layer);
+		}
+		
 
 		//}
 	}
-	return false;
-
-}
-void ChooseLeague::onClickUp(Sprite * target){
+	
 }
 
 void ChooseLeague::backActionCallback(cocos2d::Ref *pSender)
@@ -225,15 +255,15 @@ void ChooseLeague::mapActionCallback(cocos2d::Ref *pSender){
 	}
 }
 
-//协议实现
-bool ChooseLeague::touchBegan(Touch *touch, Event *unusedEvent)
-{
-    log("touchBegan");
-    return true;
-}
-
-bool ChooseLeague::touchEnd(Touch *touch,Event *unusedEvent)
-{
-    log("touch end");
-    return true;
-}
+////协议实现
+//bool ChooseLeague::touchBegan(Touch *touch, Event *unusedEvent)
+//{
+//    log("touchBegan");
+//    return true;
+//}
+//
+//bool ChooseLeague::touchEnd(Touch *touch,Event *unusedEvent)
+//{
+//    log("touch end");
+//    return true;
+//}

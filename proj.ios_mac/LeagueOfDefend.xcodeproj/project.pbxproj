@@ -157,6 +157,7 @@
 		5021B9B71CF28F8800FB102E /* Zilean_Passive.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Zilean_Passive.png; sourceTree = "<group>"; };
 		5021B9C31CF2920F00FB102E /* LeagueDetailSprite.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LeagueDetailSprite.cpp; sourceTree = "<group>"; };
 		5021B9C41CF2920F00FB102E /* LeagueDetailSprite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeagueDetailSprite.h; sourceTree = "<group>"; };
+		5027AA141CF59572008FE3FB /* EventProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EventProtocol.h; sourceTree = "<group>"; };
 		503AE0F617EB97AB00D1A890 /* Icon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = Icon.icns; sourceTree = "<group>"; };
 		503AE0F717EB97AB00D1A890 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		503AE0FA17EB989F00D1A890 /* AppController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppController.h; path = ios/AppController.h; sourceTree = SOURCE_ROOT; };
@@ -389,6 +390,7 @@
 			children = (
 				50204C5A1CEC085F000A95FC /* ToolKit.cpp */,
 				50204C5B1CEC085F000A95FC /* ToolKit.h */,
+				5027AA141CF59572008FE3FB /* EventProtocol.h */,
 			);
 			path = ToolKit;
 			sourceTree = "<group>";

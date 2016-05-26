@@ -21,7 +21,8 @@
 #define x_getPointX(obj)        obj->getPosition().x
 #define x_getPointY(obj)        obj->getPosition().y
 #define x_log_size(size)        log("size,w:%f,h:%f",size.width,size.height)
-#define x_log_point(position)   log("size,x:%f,y:%f",position.x,position.y)
+#define x_log_point(position)   log("position,x:%f,y:%f",position.x,position.y)
+#define x_log_rect(rect)        log("rect,x:%f,y:%f,w:%f,h:%f",rect.origin.x,rect.origin.y,rect.size.height,rect.size.width)
 
 //xml_const
 #define str_league_detail_name_001          "league_detail_name_001"

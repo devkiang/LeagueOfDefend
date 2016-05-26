@@ -1,13 +1,13 @@
 
-#include "EventTouchLayer.h"
+#include "BaseLayer.h"
 USING_NS_CC;
-void EventTouchLayer::initEvent(){
+void BaseLayer::initEvent(){
 	
 	auto touchLisener = EventListenerTouchOneByOne::create();
 	// 设置是否向下传递触摸，true表示不向下触摸。
 	touchLisener->setSwallowTouches(true);
-	touchLisener->onTouchBegan = CC_CALLBACK_2(EventTouchLayer::onTouchBegan, this);
-	touchLisener->onTouchEnded = CC_CALLBACK_2(EventTouchLayer::onTouchEnded, this);
+	touchLisener->onTouchBegan = CC_CALLBACK_2(BaseLayer::onTouchBegan, this);
+	touchLisener->onTouchEnded = CC_CALLBACK_2(BaseLayer::onTouchEnded, this);
 	
 	if (!sprites.empty())
 	{
@@ -29,7 +29,7 @@ void EventTouchLayer::initEvent(){
 		
 	}
 }
-bool EventTouchLayer::onTouchBegan(Touch *touch, Event *event){
+bool BaseLayer::onTouchBegan(Touch *touch, Event *event){
 	// 1目标精灵
 	auto target = static_cast<Sprite*>(event->getCurrentTarget());
 	//全屏点击的范围
@@ -46,18 +46,16 @@ bool EventTouchLayer::onTouchBegan(Touch *touch, Event *event){
 	return false;
 	//return onClickDown(target);
 }
-void EventTouchLayer::onTouchEnded(Touch* touch, Event* event){
+void BaseLayer::onTouchEnded(Touch* touch, Event* event){
 	auto target = static_cast<Sprite*>(event->getCurrentTarget());
 	onClickUp(target);
 }
 
-bool EventTouchLayer::onClickDown(Sprite * target){
+bool BaseLayer::onClickDown(Sprite * target){
 	return true;
 }
-void EventTouchLayer::onClickUp(Sprite * target){
+void BaseLayer::onClickUp(Sprite * target){
 }
-void EventTouchLayer::pushSprite(Sprite*& sprite){
-
+void BaseLayer::pushSprite(Sprite*& sprite){
 	this->sprites.pushBack(sprite);
-	
 }

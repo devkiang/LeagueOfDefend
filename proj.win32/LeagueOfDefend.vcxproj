@@ -145,8 +145,8 @@ xcopy "$(ProjectDir)..\Resources" "$(OutDir)" /D /E /I /F /Y
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="..\Classes\AppDelegate.cpp" />
-    <ClCompile Include="..\Classes\Layer\EventTouchLayer.cpp" />
-    <ClCompile Include="..\Classes\Scene\ChooseLeague.cpp" />
+    <ClCompile Include="..\Classes\Layer\BaseLayer.cpp" />
+    <ClCompile Include="..\Classes\Scene\ChooseLeagueScene.cpp" />
     <ClCompile Include="..\Classes\Scene\ChooseMapScene.cpp" />
     <ClCompile Include="..\Classes\Scene\MainMenuScene.cpp" />
     <ClCompile Include="..\Classes\Spirit\LeagueDetailSprite.cpp" />
@@ -155,9 +155,9 @@ xcopy "$(ProjectDir)..\Resources" "$(OutDir)" /D /E /I /F /Y
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\Classes\AppDelegate.h" />
-    <ClInclude Include="..\Classes\Layer\EventTouchLayer.h" />
+    <ClInclude Include="..\Classes\Layer\BaseLayer.h" />
     <ClInclude Include="..\Classes\LODConfig.h" />
-    <ClInclude Include="..\Classes\Scene\ChooseLeague.h" />
+    <ClInclude Include="..\Classes\Scene\ChooseLeagueScene.h" />
     <ClInclude Include="..\Classes\Scene\ChooseMapScene.h" />
     <ClInclude Include="..\Classes\Scene\MainMenuScene.h" />
     <ClInclude Include="..\Classes\Spirit\LeagueDetailSprite.h" />

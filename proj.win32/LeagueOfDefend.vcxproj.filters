@@ -27,13 +27,13 @@
     <ClCompile Include="..\Classes\Scene\MainMenuScene.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="..\Classes\Scene\ChooseLeague.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
     <ClCompile Include="..\Classes\Spirit\LeagueDetailSprite.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="..\Classes\Layer\EventTouchLayer.cpp">
+    <ClCompile Include="..\Classes\Scene\ChooseLeagueScene.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Layer\BaseLayer.cpp">
       <Filter>src</Filter>
     </ClCompile>
   </ItemGroup>
@@ -56,13 +56,13 @@
     <ClInclude Include="..\Classes\Scene\MainMenuScene.h">
       <Filter>src</Filter>
     </ClInclude>
-    <ClInclude Include="..\Classes\Scene\ChooseLeague.h">
-      <Filter>src</Filter>
-    </ClInclude>
     <ClInclude Include="..\Classes\Spirit\LeagueDetailSprite.h">
       <Filter>src</Filter>
     </ClInclude>
-    <ClInclude Include="..\Classes\Layer\EventTouchLayer.h">
+    <ClInclude Include="..\Classes\Scene\ChooseLeagueScene.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Layer\BaseLayer.h">
       <Filter>src</Filter>
     </ClInclude>
   </ItemGroup>

@@ -2,12 +2,12 @@
 #include "cocos2d.h"
 USING_NS_CC;
 
-class EventTouchLayer:public cocos2d::Layer
+class BaseLayer:public cocos2d::Layer
 {
 public:
 	cocos2d::Vector<Sprite*> sprites = Vector<Sprite*>();
 	virtual void initEvent();
-	CREATE_FUNC(EventTouchLayer);
+	CREATE_FUNC(BaseLayer);
 	// 重载触摸回调函数
 	bool onTouchBegan(Touch *touch, Event *event);
 	void onTouchEnded(Touch* touch, Event* event);

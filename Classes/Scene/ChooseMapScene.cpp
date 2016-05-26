@@ -8,7 +8,7 @@
 
 #include "ChooseMapScene.h"
 #include "MainMenuScene.h"
-#include "ChooseLeague.h"
+#include "ChooseLeagueScene.h"
 USING_NS_CC;
 
 Scene* ChooseMapScene::createScene()
@@ -83,12 +83,10 @@ void ChooseMapScene::backActionCallback(cocos2d::Ref *pSender)
 void ChooseMapScene::mapActionCallback(cocos2d::Ref *pSender){
 	Node *sender = (Node*)pSender;
 	int tag = sender->getTag();
-	log("fuck %d",tag);
 	switch (tag) {
 	case 0:
 	{
-			  log("fuck %d",tag);
-			  auto scene = ChooseLeague::createScene();
+			  auto scene = ChooseLeagueScene::createScene();
 			  Director::getInstance()->replaceScene(TransitionFade::create(0.5, scene));
 	}
 		break;

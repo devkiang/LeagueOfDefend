@@ -1,19 +1,19 @@
-#ifndef ChooseLeague_h
-#define ChooseLeague_h
-#include "EventTouchLayer.h"
+#ifndef ChooseLeagueScene_h
+#define ChooseLeagueScene_h
+#include "BaseLayer.h"
 #include "LODConfig.h"
 #include "EventProtocol.h"
 
-class ChooseLeague : public EventTouchLayer {
+class ChooseLeagueScene : public BaseLayer {
 
 
 public:
 	bool init();
 	static cocos2d::Scene* createScene();
-	ChooseLeague* getInstance();
+	ChooseLeagueScene* getInstance();
 	void backActionCallback(cocos2d::Ref* pSender);
 	void mapActionCallback(cocos2d::Ref* pSender);
-	CREATE_FUNC(ChooseLeague);
+	CREATE_FUNC(ChooseLeagueScene);
     cocos2d::Sprite* zhaoxinSprite;
 	cocos2d::Sprite* worftSprite;
 

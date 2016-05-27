@@ -25,5 +25,8 @@
         <key>league_detail_specific_002</key>
         <string>10%概率使超级防御塔进行一次火攻击，造成215(物理伤害)+当前等级*60(魔法伤害),被击中的敌人会被灼烧，并让受到伤害的敌人十秒内造成200(模仿伤害)点的额外伤害</string>
         <!-- 召唤师简介、名称、特性描述 end-->
+
+        <key>about_introduce</key>
+        <string>缩影工作室</string>
     </dict>
 </plist>

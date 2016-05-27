@@ -1,6 +1,7 @@
 #include "MainMenuScene.h"
 #include "SimpleAudioEngine.h"
 #include "ChooseMapScene.h"
+#include "AboutScene.h"
 USING_NS_CC;
 
 Scene* MainMenuScene::createScene()
@@ -124,6 +125,8 @@ void MainMenuScene::menuActionCallback(cocos2d::Ref *pSender)
             
         case 3:
         {
+			auto scene = AboutScene::createScene();
+			Director::getInstance()->replaceScene(TransitionFadeBL::create(0.5, scene));
             
         }
             break;

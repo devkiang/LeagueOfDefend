@@ -1,6 +1,7 @@
 ﻿#include "ChooseLeagueScene.h"
 #include "ChooseMapScene.h"
 #include "LeagueDetailSprite.h"
+#include "PlayScene.h"
 USING_NS_CC;
 Scene* ChooseLeagueScene::createScene(){
 	auto scene = Scene::create();
@@ -61,9 +62,11 @@ bool ChooseLeagueScene::init(){
 void ChooseLeagueScene::onTouchUp(Sprite * sender){
 	if (sender == zhaoxinSprite)
 	{
+		auto scene = PlayScene::createScene();
+		turnToScene(scene);
 		/*if (target->getBoundingBox().containsPoint(touch->getLocation()))
 		{*/
-		auto memory = sender->getChildByTag(100);
+		/*auto memory = sender->getChildByTag(100);
 		if (memory){
 			memory->removeFromParent();
 			memory = NULL;
@@ -79,7 +82,7 @@ void ChooseLeagueScene::onTouchUp(Sprite * sender){
 			layer->setPosition(0, 0);
 			layer->setPosition(0, sender->getContentSize().height);
 			sender->addChild(layer);
-		}
+		}*/
 	}
 }
 

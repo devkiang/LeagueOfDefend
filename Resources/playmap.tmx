@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="32" height="32" tilewidth="32" tileheight="32">
+ <tileset firstgid="1" name="land" tilewidth="32" tileheight="32">
+  <image source="150822gif0uzdyho0sdguu.png" width="96" height="128"/>
+ </tileset>
+ <tileset firstgid="13" name="road" tilewidth="32" tileheight="32">
+  <image source="150830zr9xwd6djvrw6wh6.png" width="96" height="128"/>
+ </tileset>
+ <layer name="bg" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eJzNlDcOBDEMA3057uX0/5ceSxUuKJs0thhgoHYgTqWUC7iCBViC1UC/gTt4gDXYgO1Af4IXeIMd2IPDQP+AL/iBIziB80CfQn/Gnf0Zd/Zn3NmfcXV/ppWzP9PK2Z9p5ezPtJprf8Ve9PRX7EVPf8Ve9PRX7IWqf+teqPq37oWqf+teqPq37kW2P/Pnzv7Mnzv7M3/u7M/8ubp/1tX9s67un3V1/6zPqX/N483dv+bx5u5f83hz9695vP0B744mEQ==
+  </data>
+ </layer>
+ <objectgroup name="obj">
+  <object name="0" x="38" y="10"/>
+  <object name="1" x="36" y="236"/>
+  <object name="2" x="362" y="202"/>
+  <object name="3" x="332" y="750"/>
+  <object name="4" x="554" y="722"/>
+  <object name="5" x="532" y="398"/>
+  <object name="6" x="754" y="444"/>
+  <object name="7" x="724" y="1014"/>
+  <object name="8" x="1010" y="972"/>
+ </objectgroup>
+</map>

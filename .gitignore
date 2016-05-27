@@ -14,3 +14,5 @@
 /bin/*
 /out/*
 proj.android-studio/app/app.iml
+proj.win32/LeagueOfDefend.vcxproj
+proj.win32/LeagueOfDefend.vcxproj.filters

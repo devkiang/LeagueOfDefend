@@ -1,4 +1,6 @@
 
+#ifndef BASELAYER_H
+#define BASELAYER_H
 #include "cocos2d.h"
 
 class BaseLayer:public cocos2d::Layer
@@ -16,8 +18,11 @@ public:
     virtual void onDoubleTouch(cocos2d::Sprite * sender);
     virtual void onMove(cocos2d::Sprite * sender);
 	//cocos2d::Vector<Sprite*> pushSprite(const Sprite& sprite);
-	void pushSprite(cocos2d::Sprite*& sprite);
+	
 private:
-
+protected:
+	void pushSprite(cocos2d::Sprite* sprite);//push sprite to vector 
+	void turnToScene(cocos2d::Scene* scene);//change to next scene
 };
 
+#endif

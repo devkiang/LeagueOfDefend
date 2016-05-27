@@ -4,7 +4,6 @@ USING_NS_CC;
 void BaseLayer::initEvent(){
 	
 	auto touchLisener = EventListenerTouchOneByOne::create();
-	// …Ë÷√ «∑ÒœÚœ¬¥´µ›¥•√˛£¨true±Ì æ≤ªœÚœ¬¥•√˛°£
 	touchLisener->setSwallowTouches(true);
 	touchLisener->onTouchBegan = CC_CALLBACK_2(BaseLayer::onTouchBegan, this);
 	touchLisener->onTouchEnded = CC_CALLBACK_2(BaseLayer::onTouchEnded, this);
@@ -35,7 +34,7 @@ void BaseLayer::initEvent(){
  *
  *  @param sprite node
  */
-void BaseLayer::pushSprite(Sprite*& sprite){
+void BaseLayer::pushSprite(Sprite* sprite){
     this->sprites.pushBack(sprite);
 }
 
@@ -99,4 +98,8 @@ void BaseLayer::onDoubleTouch(Sprite *sender)
 {
     
 }
+
+ void BaseLayer::turnToScene(cocos2d::Scene* scene){
+	 Director::getInstance()->replaceScene(TransitionFade::create(0.5, scene));
+ }
 

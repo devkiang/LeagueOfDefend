@@ -68,6 +68,7 @@ void BaseSprite::goOnFoot(){
 		auto move = MoveTo::create(duration, nextPoint->getPosition());
 		auto action = Sequence::create(move, callFun, NULL);
 		sprite->runAction(action);
+		
 	}
 	
 }
